@@ -9,3 +9,4 @@ en pointant le dossier du projet.
 
 Quelques fonctions ne sont pas présente dans la version présenté :
 - L'authentification et les vérifications sur chaque fonction par authentification
+- J'ai voulu faire les emprunts sauf qu'une erreur m'en empêche sur le modèle de Loan car le associate ne récupère pas Book.

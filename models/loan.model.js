@@ -18,5 +18,8 @@ module.exports = function (sequelize, DataTypes) {
         underscored: true,
         timestamps: false
     });
+    /*Loan.associate = (models) => {
+        models.Book.belongsToMany()
+    }*/
     return Loan;
 }

@@ -61,9 +61,8 @@ module.exports = function (app) {
             } catch (err) {
                 res.status(409).end();
             }
-        } else {
-            res.status(400).end();
         }
+        res.status(400).end();
 
     });
 
