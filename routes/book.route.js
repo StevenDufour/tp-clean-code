@@ -39,5 +39,33 @@ module.exports = function (app) {
         res.status(400).end();
     });
 
+    app.put('/api/book/update', bodyParser.json(), async (req, res) => {
+        if(req.body.id && req.body.title && req.body.author){
+            try{
+                const book = await BookController.updateBook(req.body.id,
+                    req.body.title,
+                    req.body.author);
+                res.status(200).json(book);
+            } catch(err) {
+                res.status(409).end();
+            }
+        }
+        res.status(400).end();
+    });
+
+    app.delete('/api/book/delete/:id', async (req, res) => {
+        if(req.params.id){
+            try {
+                await BookController.deleteBook(req.params.id);
+                res.status(200).send("This book is deleted");
+            } catch (err) {
+                res.status(409).end();
+            }
+        } else {
+            res.status(400).end();
+        }
+
+    });
+
 
 }

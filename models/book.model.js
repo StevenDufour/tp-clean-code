@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const Book =  sequelize.define('Livre', {
+    const Book =  sequelize.define('Book', {
         id: {
             type: DataTypes.BIGINT,
             primaryKey: true,

@@ -11,6 +11,9 @@ module.exports = function (sequelize, DataTypes) {
         lastname: {
            type: DataTypes.STRING
         },
+        login: {
+           type: DataTypes.STRING
+        },
         type: {
            type: DataTypes.STRING,
             defaultValue: "Membre"
